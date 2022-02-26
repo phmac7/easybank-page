@@ -1,0 +1,79 @@
+.headline{
+    width: 100%;
+    min-height: 65.7rem;
+    background-image: url(../images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 60rem bottom -22rem;
+    background-color: $color-very-light-gray;
+    position:relative;
+
+    @media only screen and (max-width: $mobile) {
+        min-height: 65.7rem;
+        display:flex;
+    }
+
+}
+.headlinebox {
+    display:flex;
+
+    @media only screen and (max-width: $mobile) {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 80rem;
+    }
+}
+
+.boximg {
+    @media only screen and (max-width: $mobile) {
+        flex: 1;
+        display:block;
+    }
+}
+.smartphone {
+    position: absolute;
+    top: -12rem;
+    right: -13rem;
+    @media only screen and (max-width: $mobile) {
+        top: -16rem;
+        right: 0;
+        width: -webkit-fill-available;
+    }
+}
+
+
+.headline__textbox {
+    transform:translateY(65%);
+    flex: 1;
+    padding-right: 70rem;
+
+    @media only screen and (max-width: $mobile) {
+        transform:translateY(0);
+        padding:0;
+        flex: .8;
+        text-align: center;
+    }
+
+
+
+    
+    @media only screen and (max-width:367px) {
+        margin-bottom: 5rem;
+    }
+
+
+
+        &--title {
+            font-size: 5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        &--paragraph {
+            font-size: 1.65rem;
+            margin-bottom: 5rem;
+            line-height: 2.5rem;
+            color: $color-grayish-blue;
+        }
+     
+}

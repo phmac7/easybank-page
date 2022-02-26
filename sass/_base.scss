@@ -1,0 +1,57 @@
+// //COLORS
+
+//PIRIMARY
+$color-dark-blue: #2d314d;
+$color-lime-green: #31d35c;
+$color-bright-cyan: #2bb7da;
+
+//NEUTRAL
+$color-grayish-blue: #9698a6;
+$color-light-grayish-blue: #f3f4f6;
+$color-very-light-gray: #fafafa;
+$color-white: #ffffff;
+
+//mobile = 375px
+//desktop = 1440px
+$mobile: 23.4375em; // 375px/16
+$tablet-port: 50em; // 800px/16
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after,*::before{
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (max-width: $mobile) {
+        font-size: 46%;
+    }
+    
+}
+
+body{
+    max-width: 144rem;
+    margin: 0 auto;
+    @media only screen and(max-width: $mobile) {
+        
+    }
+}
+
+.container {
+    padding: 0 16rem;
+    height: 100%;
+    @media only screen and(max-width: $mobile) {
+        padding: 0 5rem;
+    }
+}
+
+main {
+    overflow: hidden;
+}

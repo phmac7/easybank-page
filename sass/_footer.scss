@@ -1,0 +1,133 @@
+.footer {
+    background-color: $color-dark-blue;
+    height: 19rem;
+    @media only screen and (max-width: $mobile) {
+        height: auto;
+    }
+}
+
+.footer__box {
+    padding: 4rem 0;
+    display:flex;
+    height: 100%;
+
+    @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    &-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 15%;
+        
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+            align-items: center;
+            justify-content:space-between;
+
+        &--logo {
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 4rem;
+            }
+        }
+        }
+    }
+    &--iconslist {
+        display: flex;
+        list-style: none;
+        @media only screen and (max-width: $mobile) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &--icons {
+        &:not(:last-of-type) {
+            margin-right: 1rem;
+        }
+
+        &-link {
+            text-decoration: none;
+
+        }
+
+        &-object {
+            pointer-events: none;
+        }
+
+    }
+
+    &-2, &-3 {
+        width: 15%; 
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            @media only screen and (max-width: $mobile) {
+                align-items: center;
+            }
+        }
+
+        &--item {
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 2rem;
+            }
+            &-link, &-link:visited {
+                text-decoration: none;
+                color:$color-light-grayish-blue;
+                
+            }
+            &-link:hover,
+            &-link:active,
+            &-link:focus {
+                color: $color-lime-green;
+            }
+        }
+    }
+
+    &-2 {
+        margin: 0 1rem 0 12rem;
+        @media only screen and (max-width: $mobile) {
+            margin: 0;
+        }
+    }
+
+    &-4 {
+        flex:1;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        @media only screen and (max-width: $mobile) {
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+        }
+
+        &--item-copyright {
+            display: block;
+            color: $color-grayish-blue;
+            margin-top: 2rem;
+        }
+
+    }
+    
+}
+
+.footer__box-4--item {
+    @media only screen and (max-width: $mobile) {
+        margin-top: 4rem;
+        align-self: center;
+    }
+}

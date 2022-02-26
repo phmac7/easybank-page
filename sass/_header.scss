@@ -1,0 +1,61 @@
+.header {
+    background-color: $color-white;
+    padding: 1.85rem 0;
+    position: relative;
+    z-index: 10;
+    @media only screen and (max-width: $mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__menulist {
+        display:flex;
+        list-style: none;
+        @media only screen and (max-width: $mobile) {
+            display: none;
+        }
+        
+
+        &--item {
+            margin: 0 1.6rem;
+        }
+
+        &--link,
+        &--link:visited {
+            text-decoration: none;
+            color:$color-grayish-blue;
+            position: relative;
+            
+        }
+
+        &--link:hover,
+        &--link:active,
+        &--link:focus {
+            color: $color-dark-blue;
+        }
+
+        &--item:hover &--link::after {
+            @include selecteditem;
+        }
+        &--item:active &--link::after {
+            @include selecteditem;
+        }
+        &--item:focus &--link::after {
+            @include selecteditem;
+        }
+
+    }
+
+    &__button {
+        @media only screen and (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+}
+
