@@ -31,7 +31,7 @@ Width Breakpoints: <br>
 
 ### Screenshot
 
-![](easyban.png)
+![](easybank-print.png)
 
 
 ### Links
