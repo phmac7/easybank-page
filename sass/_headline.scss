@@ -8,18 +8,25 @@
     background-color: $color-very-light-gray;
     position:relative;
 
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet-port) {
         min-height: 65.7rem;
         display:flex;
+        background-position: left 35rem bottom 12rem;
+    }
+    @media only screen and (max-width: $mobile) {
+        background-position: left -12rem bottom 34rem;
     }
 
 }
 .headlinebox {
     display:flex;
-
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet-port) {
         flex-direction: column-reverse;
         width: 100%;
+        height: 100rem;
+    }
+
+    @media only screen and (max-width: $mobile) {
         height: 80rem;
     }
 }
@@ -34,10 +41,22 @@
     position: absolute;
     top: -12rem;
     right: -13rem;
+
+    @media only screen and (max-width: $bp-fix-header) {
+        top: -21rem;
+        right: -24rem;
+    }
+
+    @media only screen and(max-width: $tablet-port) {
+        width: 58rem;
+        top: -19rem;
+        right: -7rem;
+    }
+
     @media only screen and (max-width: $mobile) {
-        top: -16rem;
-        right: 0;
-        width: -webkit-fill-available;
+        top: -18rem;
+        right: -7px;
+        width: 98vw;
     }
 }
 
@@ -47,11 +66,26 @@
     flex: 1;
     padding-right: 70rem;
 
+
+    @media only screen and (max-width: $tablet-land) {
+        transform: translateY(52%);
+    }
+    @media only screen and (max-width: $bp-fix-header){
+        transform: translateY(20%);
+    }
+
+
+    @media only screen and(max-width: $tablet-port) {
+        transform: translate(10%, 50%);
+        padding-right: 23rem;
+        text-align: left;
+    }
+
     @media only screen and (max-width: $mobile) {
-        transform:translateY(0);
+        transform:translate(0);
+        text-align:center;
         padding:0;
         flex: .8;
-        text-align: center;
     }
 
 
@@ -67,6 +101,16 @@
             font-size: 5rem;
             font-weight: 400;
             margin-bottom: 2rem;
+            @media only screen and (max-width: $tablet-land) {
+                max-width: 36.5rem;
+            }
+
+            @media only screen and (max-width: $tablet-port) {
+                padding-right: 8rem;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-right: 0rem;
+            }
         }
 
         &--paragraph {
@@ -74,6 +118,9 @@
             margin-bottom: 5rem;
             line-height: 2.5rem;
             color: $color-grayish-blue;
+            @media only screen and (max-width: $tablet-land) {
+                max-width: 36.5rem;
+            }
         }
      
 }

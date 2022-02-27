@@ -7,7 +7,7 @@
         font-weight: 400;
         font-size: 4rem;
         padding: 9rem 0 4rem;
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet-port) {
             text-align: center;
         }
     }
@@ -15,7 +15,7 @@
 
 .container-articles {
     display: flex;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet-port) {
         flex-direction: column;
     }
 }
@@ -26,10 +26,17 @@
     overflow:hidden;
     background-color: $color-white;
     flex:1;
-    
-    @media only screen and (max-width: $mobile) {
+
+    @media only screen and (max-width: $tablet-port) {
+        margin-bottom: 4rem;
+        width: 50%;
+        margin: 0 auto;
         margin-bottom: 3rem;
     }
+    @media only screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
 
     &-text {
         padding: 0 2rem 2rem 2rem;
@@ -38,9 +45,8 @@
 
 
     &:not(:last-of-type){
+        @media only screen and (min-width: $tablet-port){
         margin-right: 3rem;
-        @media only screen and (max-width: $mobile) {
-            margin-right: 0;
         }
     }
 

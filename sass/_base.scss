@@ -15,6 +15,8 @@ $color-white: #ffffff;
 //desktop = 1440px
 $mobile: 23.4375em; // 375px/16
 $tablet-port: 50em; // 800px/16
+$bp-fix-header: 61.25em; // 980px / 16
+$tablet-land: 86.875em; // 1390px /16
 
 
 
@@ -30,6 +32,15 @@ $tablet-port: 50em; // 800px/16
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $tablet-land) {
+        font-size: 56%;
+    }
+
+    @media only screen and(max-width: $tablet-port) {
+        font-size: 52%;
+    }
+
     @media only screen and (max-width: $mobile) {
         font-size: 46%;
     }
@@ -39,15 +50,16 @@ html {
 body{
     max-width: 144rem;
     margin: 0 auto;
-    @media only screen and(max-width: $mobile) {
-        
-    }
 }
 
 .container {
     padding: 0 16rem;
     height: 100%;
-    @media only screen and(max-width: $mobile) {
+    @media only screen and (max-width: $tablet-land) {
+        padding: 1rem;
+    }
+
+    @media only screen and(max-width: $tablet-port) {
         padding: 0 5rem;
     }
 }

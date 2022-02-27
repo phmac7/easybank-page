@@ -3,7 +3,7 @@
     padding: 1.85rem 0;
     position: relative;
     z-index: 10;
-    @media only screen and (max-width: $mobile) {
+    @media only screen and (max-width: $tablet-port) {
         padding: 3rem 0;
     }
 }
@@ -12,17 +12,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 
     &__menulist {
         display:flex;
         list-style: none;
-        @media only screen and (max-width: $mobile) {
-            display: none;
-        }
-        
 
         &--item {
             margin: 0 1.6rem;
+            
         }
 
         &--link,
@@ -30,6 +28,8 @@
             text-decoration: none;
             color:$color-grayish-blue;
             position: relative;
+            
+            
             
         }
 
@@ -52,10 +52,86 @@
     }
 
     &__button {
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tablet-port) {
             display: none;
         }
     }
-
 }
+
+
+//DROPDOWN 
+.nav {
+    &__menulist {
+        @media only screen and (max-width: $tablet-port) {
+            flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            top: 13vh;
+            left: 36vw;
+            transform: translateX(-270%);
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        &--item {
+            @media only screen and (max-width: $tablet-port) {
+                margin-bottom: 3.5rem;
+                font-size: 2.8rem;
+            }
+        }
+
+        &--link, &--link:visited {
+            @media only screen and (max-width: $tablet-port) {
+                color: $color-dark-blue;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.nav__dropdown {
+    display: none;
+
+    @media only screen and (max-width: $tablet-port) {
+        display:inline-block;
+    }
+
+    &--btn {
+        padding: 1rem;
+        pointer-events: none;
+        
+    }
+    &--background {
+        @media only screen and (max-width: $tablet-port) {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top:10rem;
+            left:1.5rem;
+            background-color: $color-white;
+            box-shadow: 0 1rem 21rem 6rem $color-dark-blue;
+            width: 90vw ;
+            height: 40rem;
+            pointer-events: none;
+            border-radius: 1rem;
+            transform: translateX(-120%);
+            transition: all .3s;
+            opacity: 0;
+        }
+        @media only screen and (max-width: $mobile) {
+            top:12rem;
+            left:1rem;
+            width: 90vw ;
+            height: 40rem;
+        }
+    }    
+}
+
+.toggle {
+    @media only screen and (max-width: $tablet-port) {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 

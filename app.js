@@ -1,3 +1,13 @@
+//navbar toggle
+const hamburguer = document.querySelector('.nav__dropdown')
+
+hamburguer.addEventListener('click', () => {
+    const list = document.querySelector('.nav__menulist')
+    list.classList.toggle('toggle')
+    const background = document.querySelector('.nav__dropdown--background')
+    background.classList.toggle('toggle')
+})
+
 //change logo color
 const logo = document.querySelector('.footer__box-1--logo')
 
@@ -20,5 +30,3 @@ icons.forEach(icons => {
         path.setAttribute('fill', "#fff")
     })
 })
-
-
